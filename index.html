@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fine Jewelry</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fine Jewelry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@500;700;900&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style id="sections-styles">
+/* CSS for section section:header */
+.main-header {
+    background-color: var(--color-background);
+    height: 88px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 77px;
+    box-sizing: border-box;
+}
+.logo {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+}
+.main-nav ul {
+    display: flex;
+    gap: 60px;
+}
+.main-nav a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color-text-dark);
+    transition: color 0.3s;
+}
+.main-nav a:hover {
+    color: var(--color-secondary);
+}
+.cart-icon-wrapper {
+    /* Based on node 1:63, 1:64, 1:65 */
+    width: 24px;
+    height: 24px;
+}
+.cart-icon {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+    -webkit-mask-image: url('images/5c632b3fdff777d9844b3a7d4beb1821a71b58e8.png');
+    mask-image: url('images/5c632b3fdff777d9844b3a7d4beb1821a71b58e8.png');
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+@media (max-width: 1024px) {
+    .header-container {
+        padding: 0 20px;
+    }
+    .main-nav ul {
+        gap: 30px;
+    }
+}
+@media (max-width: 768px) {
+    .main-nav {
+        display: none; /* Simple hiding for mobile, would be replaced by a hamburger menu */
+    }
+    .logo {
+        font-size: 28px;
+    }
+}
+
+/* CSS for section section:hero */
+#hero {
+    padding: 0;
+    height: 795px;
+    background-image: url('images/724b67c33f4e77fc3955b5b9626b58765540f80c.png');
+    background-size: cover;
+    background-position: center;
+}
+@media (max-width: 768px) {
+    #hero {
+        height: 50vh;
+    }
+}
+
+/* CSS for section section:categories */
+#categories .container {
+    text-align: center;
+}
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 35px;
+}
+.category-item {
+    text-align: center;
+}
+.category-item img {
+    width: 221px;
+    height: 221px;
+    object-fit: cover;
+    margin: 0 auto 18px;
+}
+.category-name {
+    color: var(--color-primary);
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+@media (max-width: 1200px) {
+    .categories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+@media (max-width: 768px) {
+    .categories-grid {
+        gap: 20px;
+    }
+    .category-item img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+}
+
+/* CSS for section section:feature-banner */
+#feature-banner {
+    background-color: var(--color-primary);
+    padding: 0;
+}
+.feature-banner-container {
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.feature-banner-container .text-content {
+    flex-basis: 47%;
+    padding: 100px 93px;
+    box-sizing: border-box;
+    color: var(--color-text-light);
+}
+.feature-banner-container .text-content h2 {
+    font-weight: 900;
+    font-size: 54px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+.feature-banner-container .text-content p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 37px;
+    max-width: 540px;
+}
+.feature-banner-container .image-content {
+    flex-basis: 53%;
+    align-self: stretch;
+}
+.feature-banner-container .image-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    transition: opacity 0.3s;
+}
+.btn:hover {
+    opacity: 0.85;
+}
+.btn.btn-secondary {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 1024px) {
+    .feature-banner-container {
+        flex-direction: column;
+    }
+    .feature-banner-container .text-content {
+        flex-basis: auto;
+        width: 100%;
+        padding: 60px 20px;
+        text-align: center;
+    }
+    .feature-banner-container .text-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .feature-banner-container .image-content {
+        flex-basis: auto;
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* CSS for section section:latest-gallery */
+#latest-gallery .container {
+    text-align: center;
+}
+.latest-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 42px;
+    margin-bottom: 50px;
+}
+.latest-gallery-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+.btn.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 6px 18px;
+}
+@media (max-width: 768px) {
+    .latest-gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* CSS for section section:reviews */
+#reviews .container {
+    text-align: left;
+}
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 33px;
+}
+.review-card {
+    border: 1px solid #dadada;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+    box-sizing: border-box;
+}
+.quote-icon {
+    margin: 0 auto 20px;
+}
+.review-card blockquote {
+    font-size: 18px;
+    line-height: 1.36;
+    color: var(--color-text-dark);
+    margin: 0 0 30px 0;
+    font-style: normal;
+}
+.review-card cite {
+    font-size: 18px;
+    color: #000000;
+    font-style: normal;
+}
+@media (max-width: 1024px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* CSS for section section:footer */
+.site-footer {
+    background-color: var(--color-accent);
+    padding-top: 76px;
+    padding-bottom: 32px;
+}
+.footer-links-container {
+    display: flex;
+    justify-content: center;
+    gap: 240px;
+    margin-bottom: 100px;
+}
+.footer-column h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+    color: var(--color-text-dark);
+    margin-bottom: 24px;
+}
+.footer-column ul li {
+    margin-bottom: 16px;
+}
+.footer-column a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color-text-muted);
+    transition: color 0.3s;
+}
+.footer-column a:hover {
+    color: var(--color-primary);
+}
+.copyright {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+@media (max-width: 1024px) {
+    .footer-links-container {
+        gap: 100px;
+    }
+}
+@media (max-width: 768px) {
+    .footer-links-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+}
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<header id="header" class="main-header">
+    <div class="header-container">
+        <a href="#" class="logo">fine jewelry</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#categories">Shop</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon-wrapper">
+            <div class="cart-icon"></div>
+        </div>
+    </div>
+</header>
+<section id="hero" class="hero-section">
+    <!-- This section is a full-bleed image based on node 1:59 -->
+</section>
+<section id="categories">
+    <div class="container">
+        <h2 class="section-title">Shop by Jewelry Type</h2>
+        <div class="categories-grid">
+            <div class="category-item">
+                <img src="images/a72c18a907803f896d8bf4b91e8169e18f772d9f.png" alt="Earrings">
+                <h3 class="category-name">Earrings</h3>
+            </div>
+            <div class="category-item">
+                <img src="images/9825a07cba10f51775d1eb4c841fb903a8d989a5.png" alt="Necklaces">
+                <h3 class="category-name">necklaces</h3>
+            </div>
+            <div class="category-item">
+                <img src="images/e3ab49cc979cdcb5eadcddc0c07fac834b613c5d.png" alt="Bracelets">
+                <h3 class="category-name">bracelets</h3>
+            </div>
+            <div class="category-item">
+                <img src="images/ae5c2544e89c0406f28e7fa30538ca641f0652e9.png" alt="All Rings">
+                <h3 class="category-name">all Rings</h3>
+            </div>
+            <div class="category-item">
+                <img src="images/8da48af011c354565859ea5383de88c770b4d454.png" alt="Engagement Rings">
+                <h3 class="category-name">engagement rings</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="feature-banner" class="feature-banner-section">
+    <div class="feature-banner-container">
+        <div class="text-content">
+            <h2>Hand Crafted <br>fine pieces.</h2>
+            <p>We also firmly believed that our customers deserved more choices, straightforward information and legendary service.</p>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+        </div>
+        <div class="image-content">
+            <img src="images/a1f2f7e80d6290c7d44d050b96861eef3eb7e89c.png" alt="Craftsman working on jewelry">
+        </div>
+    </div>
+</section>
+<section id="latest-gallery">
+    <div class="container">
+        <h2 class="section-title">OUR LATEST JEWELRY</h2>
+        <div class="latest-gallery-grid">
+            <img src="images/81883a5f0ae4b11d8829e27c265e5bbbc4520fca.png" alt="Latest jewelry item 1">
+            <img src="images/b0bc56abd544938b8eb02b1e200dd09e2e65fa17.png" alt="Latest jewelry item 2">
+            <img src="images/84415b17bd3f65df505ff6e25c6f0453f746077e.png" alt="Latest jewelry item 3">
+        </div>
+        <div class="gallery-button-wrapper">
+            <a href="#" class="btn btn-primary">view gallery</a>
+        </div>
+    </div>
+</section>
+<section id="reviews">
+    <div class="container">
+        <h2 class="section-title">Customer reviews</h2>
+        <div class="reviews-grid">
+            <article class="review-card">
+                <img src="images/1_19.svg" alt="Quote" class="quote-icon">
+                <blockquote>Great variety of cuts and amazing customer service. Helped to find the perfect ring and helped me to personalize it a little more.</blockquote>
+                <cite>- Nico Jones</cite>
+            </article>
+            <article class="review-card">
+                <img src="images/I1_23_1_19.svg" alt="Quote" class="quote-icon">
+                <blockquote>What an amazing shopping experience! I tried other jewelers and didn't find anything I liked. Thank you so much.</blockquote>
+                <cite>- Tracy Willis</cite>
+            </article>
+            <article class="review-card">
+                <img src="images/I1_24_1_19.svg" alt="Quote" class="quote-icon">
+                <blockquote>Great quality, and showed they can work through a problem and maintain excellent customer service!!</blockquote>
+                <cite>- Susana Santos</cite>
+            </article>
+        </div>
+    </div>
+</section>
+<footer id="footer" class="site-footer">
+    <div class="container">
+        <div class="footer-links-container">
+            <div class="footer-column">
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">all rights reserved by © Alvi Islam Sifat 2025</p>
+    </div>
+</footer>
+</body>
+</html>
